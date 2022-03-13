@@ -1,0 +1,9 @@
+{
+    "type" : "blog",
+    "thumbnail" : "https://dummyimage.com/722x402",
+    "slug" : "hello",
+    "title" : "This is hello",
+    "description" : "This is description",
+    "category" : "hello",
+    "content" : "<p><em><strong>I AM GOOD! </strong></em></p>"
+}
