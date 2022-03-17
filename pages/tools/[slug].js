@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { slug } = context.params;
 
-  let meta = await fs.promises.readFile(`C:/projects/tailgradient/frontend/data/tools/meta/${slug}.json`, "utf-8")
+  let meta = await fs.promises.readFile(`data/tools/meta/${slug}.json`, "utf-8")
 
   return {
     props: {
