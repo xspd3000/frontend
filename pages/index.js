@@ -1,4 +1,4 @@
-
+import Footer from '../components/Footer'
 import Head from 'next/head'
 import Blog from '../components/Blog'
 import * as fs from 'fs'
@@ -8,7 +8,7 @@ export default function Home(props) {
       <Head>
         <title>Tailgradient</title>
         <link rel="favicon" href="../public/favicon.svg"/>
-        htm
+        
       </Head>
       
       <Blog data={props.allBlogs}/>

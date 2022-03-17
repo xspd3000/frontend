@@ -13,7 +13,7 @@ const Header = () => {
               <ul className="flex md:space-x-11 space-x-6 font-bold text-white justify-center items-center">
                  <li className="hover:cursor-pointer"></li>
                 <Link href={"/"}><li className="hover:cursor-pointer">Home</li></Link> 
-                <Link href={"/"}><li className="hover:cursor-pointer">About Us</li></Link>
+                <Link href={"/about"}><li className="hover:cursor-pointer">About Us</li></Link>
                 <Link href={"/"}><li className="hover:cursor-pointer">Contact Us</li></Link>
               </ul>
             
