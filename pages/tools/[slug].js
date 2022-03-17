@@ -19,7 +19,7 @@ const Slug = (props) => {
 };
 
 export async function getStaticPaths() {
-  let allb = await fs.promises.readdir("C:/projects/tailgradient/frontend/data/tools/meta")
+  let allb = await fs.promises.readdir("/projects/tailgradient/frontend/data/tools/meta")
   allb = allb.map((item)=>{
     return { params: { slug: item.split(".")[0]} }
   })
