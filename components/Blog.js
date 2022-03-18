@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { useState } from 'react'
 
 const Blog = (props) => {
@@ -14,7 +14,7 @@ const Blog = (props) => {
         <div className="p-4 md:w-1/3 bg-black" key={element.title}>
         <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
             {/* Image */}
-            <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={element.thumbnail} alt="blog" height={"402"} width={"722"} priority/>
+            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={element.thumbnail} alt="blog" height={"402"} width={"722"} />
             {/* line */}
             <div className=" bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 h-1 w-full"></div>
             <div className="p-6">
