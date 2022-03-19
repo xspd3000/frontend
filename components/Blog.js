@@ -11,13 +11,13 @@ const Blog = (props) => {
     {
     blogs.map((element)=>{
       return(
-        <div className="p-4 md:w-1/3 bg-black" key={element.title}>
+        <div className="p-4 md:w-1/3 bg-black mb-6" key={element.title}>
         <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
             {/* Image */}
             <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={element.thumbnail} alt="blog" height={"402"} width={"722"} />
             {/* line */}
             <div className=" bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 h-1 w-full"></div>
-            <div className="p-6">
+            <div className="p-6 bg-slate-900">
               {/* <!-- //CATEGORY --> */}
               <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1">CATEGORY</h2>
     
@@ -28,13 +28,13 @@ const Blog = (props) => {
               <h1 className="title-font text-lg font-medium mb-3 text-white">{element.title}</h1>
     
               {/* <!-- Description --> */}
-              <p className="leading-relaxed mb-3 text-emerald-500 font-bold">{element.description}</p>
+              <p className="leading-relaxed text-xl mb-3 text-emerald-500 font-bold">{element.description}</p>
     
               {/* <!-- Url Slug --> */}
 
               <div className="flex items-center flex-wrap ">
               <Link href={`http://localhost:3000/posts/${element.slug}`}>
-                 <a className="text-white font-bold inline-flex items-center md:mb-2 lg:mb-0  bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 p-1">Click here to read the post
+                 <a className="text-white font-bold inline-flex items-center md:mb-2 lg:mb-0  bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 p-2 rounded-full hover:from-emerald-600 hover:via-blue-800 hover:to-rose-700 text-md">Click here to read the post
     
                   <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14"></path>

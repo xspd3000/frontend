@@ -5,5 +5,6 @@
     "title" : "This is good",
     "description" : "This is description 89",
     "category" : "hello",
-    "content" : "<p><em><strong>I AM GOOD! 89</strong></em></p>"
+    "content" : "<p><em><strong>I AM GOOD! 89</strong></em></p>",
+    "keywords" : ""
 }

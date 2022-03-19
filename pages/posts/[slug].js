@@ -16,6 +16,7 @@ const Slug = (props) => {
     <>
     <Head>
       <meta name="description" content={blog && blog.description} />
+      meta
     </Head>
     <section className="text-gray-400 bg-black body-font">
     <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
