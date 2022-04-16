@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import { useState } from 'react'
 
 const Blog = (props) => {
@@ -7,46 +6,33 @@ const Blog = (props) => {
   return (
 <section className="text-gray-400 bg-black body-font">
 <div className="container px-5 py-24 mx-auto">
-<div className="flex flex-wrap -m-4">
+<div className="grid grid-rows-1 md:grid-cols-3 gap-10 -m-4">
     {
     blogs.map((element)=>{
       return(
-        <div className="p-4 md:w-1/3 bg-black mb-6" key={element.title}>
-        <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-            {/* Image */}
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={element.thumbnail} alt="blog" height={"402"} width={"722"} />
-            {/* line */}
-            <div className=" bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 h-1 w-full"></div>
-            <div className="p-6 bg-slate-900">
-              {/* <!-- //CATEGORY --> */}
-              <h2 className="tracking-widest text-xs title-font font-medium text-white mb-1">CATEGORY</h2>
-    
-              {/* <!-- CATEGORY name --> */}
-              <h1 className="title-font font-bold mb-3 text-cyan-500">{element.category}</h1>
-
-              {/* title */}
-              <h1 className="title-font text-lg font-medium mb-3 text-white">{element.title}</h1>
-    
-              {/* <!-- Description --> */}
-              <p className="leading-relaxed text-xl mb-3 text-emerald-500 font-bold">{element.description}</p>
-    
-              {/* <!-- Url Slug --> */}
-
-              <div className="flex items-center flex-wrap ">
-              <Link href={`http://localhost:3000/posts/${element.slug}`}>
-                 <a className="text-white font-bold inline-flex items-center md:mb-2 lg:mb-0  bg-gradient-to-r from-rose-700 via-blue-800 to-emerald-600 p-2 rounded-full hover:from-emerald-600 hover:via-blue-800 hover:to-rose-700 text-md">Click here to read the post
-    
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-    
-                </a>
-                </Link>
-              </div>
+      
+        <div className="max-w-sm mx-auto w-80  md:w-full overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800" key={element.slug}>
+            <img className="object-cover object-center w-full h-56" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar" />
             
+            <div className="flex items-center px-6 py-3 bg-gray-900">
+                
+                <h1 className="mx-3 text-lg font-semibold text-white">{element.category}</h1>
             </div>
-        </div>
+
+            <div className="px-6 py-4">
+                <h1 className="text-xl font-semibold text-gray-800 dark:text-white">{element.title}</h1>
+
+                <p className="py-2 text-gray-700 dark:text-gray-400">{element.description}</p>
+                
+                <Link href={`/posts/${element.slug}`}>
+                  <a>
+                  <button className="px-4 py-2 font-medium my-2 tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    Click here to read more 
+                </button>
+                  </a>
+                </Link>
+                
+            </div>
         </div>
       )
     })
